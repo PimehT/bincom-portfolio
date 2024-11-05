@@ -1,10 +1,10 @@
-document.querySelectorAll('#mobile-nav li').forEach(function(li) {
-  li.addEventListener('click', function() {
-    const link = li.querySelector('a');
+document.querySelector('#mobile-nav').addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    const link = event.target.querySelector('a');
     if (link) {
       link.click();
     }
-  });
+  }
 });
 
 function xMenu(x) {
